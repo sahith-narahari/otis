@@ -1,21 +1,21 @@
 package config
 
 import (
-	"os"
 	"log"
+	"os"
 )
 
 type AppConfig struct {
-	Port        string
-	Token       string
+	Port  string
+	Token string
 }
 
 var NewApp AppConfig
 
 func SetConfig() {
 	NewApp = AppConfig{
-		Port:      getEnv("port", ":5000"),
-		Token:getEnv("token", ""),
+		Port:  getEnv("port", ":5000"),
+		Token: getEnv("token", ""),
 	}
 }
 

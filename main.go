@@ -9,14 +9,14 @@ import (
 )
 
 func init() {
-	if err := godotenv.Load();err != nil {
+	if err := godotenv.Load(); err != nil {
 		fmt.Println("env file not found")
 	}
 	config.SetConfig()
 }
 func main() {
 	err := alert.SendAlert()
-	if err != nil{
+	if err != nil {
 		log.Panicf("Couldn't start alerting bot")
 	}
 }
